@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript Class</title>
+
+    </head>
+
+    <body>
+        <h1>Coding Task 1</h1>
+        <p id="coding1"></p>
+
+        <h1>Coding Task 2</h1>
+        <p id="coding2"></p>
+
+        <h1>Coding Task 3</h1>
+        <p><span>First Cummulative Total: <span id="coding3firstTotal"></span></span></p>
+        <p><span>Second Cummulative Total: <span id="coding3secondTotal"></span></span></p>
+        <p><span>Third Cummulative Total: <span id="coding3thirdTotal"></span></span></p>
+
+        <h1>Coding Task 4</h1>
+        <p><span>First Function Call: <span id="coding4first"></span></span></p>
+        <p><span>Second Function Call: <span id="coding4second"></span></span></p>
+        <p><span>Third Function Call: <span id="coding4third"></span></span></p>
+
+
+        <script>
+            //Answer to Coding Task 1
+            let firstName = "Moe", lastName = "Adam", age = 52;
+
+            let result1 = firstName + ' ' + lastName + ' ' + age;
+
+            document.getElementById("coding1").innerHTML = result1;
+
+            //Answer to Coding Task 2
+            let firstname = "Mike";
+            let lastname = "Douglas";
+            let fullname = firstname + ' ' + lastname;
+
+            document.getElementById("coding2").innerHTML = fullname;
+
+            alert(fullname);
+
+            //Answer to Coding Task 3
+            let total = 0;
+            function addMe(x){
+                total += x;
+            }
+
+            addMe(4);
+            document.getElementById("coding3firstTotal").innerHTML = total;
+            
+            addMe(5);
+            document.getElementById("coding3secondTotal").innerHTML = total;
+            
+            addMe(6);
+            document.getElementById("coding3thirdTotal").innerHTML = total;
+
+            //Answer to Coding Task 4
+            function calculateCatAge(age_in_human){
+                let age_in_cat = age_in_human * 7;
+
+                return "You cat is " + age_in_cat + " years old in cat years!";
+            }
+
+            let catOne = calculateCatAge(2);
+            let catTwo = calculateCatAge(3);
+            let catThree = calculateCatAge(4);
+
+            document.getElementById("coding4first").innerHTML = catOne;
+            document.getElementById("coding4second").innerHTML = catTwo;
+            document.getElementById("coding4third").innerHTML = catThree;
+
+        
+        </script>
+    </body>
+</html>
